@@ -20,14 +20,14 @@ def lambda_handler(event, context):
         
     if len(keys) > 1:
         
-        stream = s3.get_object(Bucket=bucket, Key=keys[1])
+        stream = s3.get_object(Bucket=bucket, Key=keys[0])
         contents = stream['Body'].read()
         data = json.loads(contents)
         Rolls=returnSum(data)
         
         d1=data
     
-        keys.pop(1)
+        keys.pop(0)
 
         for i in range(len(keys)):
             stream = s3.get_object(Bucket=bucket, Key=keys[i])
