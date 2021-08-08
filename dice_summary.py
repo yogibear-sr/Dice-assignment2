@@ -38,12 +38,12 @@ def lambda_handler(event, context):
 # now merge the two arrays using Counter
             d1 = Counter(d1)+Counter(data)
 
-            print("TOTAL number of rolls is ", Rolls)
+        print("TOTAL number of rolls is ", Rolls)
 
 # go through each element in the array summarise and print
-            for key,value in d1.items():
-                percent = (value / Rolls)*100
-                print("The number ",key, "was rolled ",value, "times, which is ", round(percent,2),"%")
+        for key,value in d1.items():
+            percent = (value / Rolls)*100
+            print("The number ",key, "was rolled ",value, "times, which is ", round(percent,2),"%")
                 
     else:
         print("Not enough files to compare")
