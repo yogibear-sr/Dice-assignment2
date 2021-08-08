@@ -28,10 +28,6 @@ def lambda_handler(event, context):
         d1=data
     
         keys.pop(1)
-    
-        print(keys)
-    
-        exit()
 
         for i in range(len(keys)):
             stream = s3.get_object(Bucket=bucket, Key=keys[i])
