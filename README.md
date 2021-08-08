@@ -3,8 +3,11 @@
 lambda function dice distribution simulation
 
 dice_summary.py - python script reads json data from the roll_dice.py output files in the s3 bucket and produces summary of the number of simulations and the percentage of each number coming up
+
 variables.tf - terraform varirables
+
 main.tf - main terraform file which create a lambda function and deploys the above python script.
+
 
 Download the repository using git clone into a folder
 Ensure you have access to AWS through access keys or token from the cli
